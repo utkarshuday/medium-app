@@ -3,7 +3,10 @@ import '@/ui/globals.css';
 import { source_serif } from '@/ui/fonts';
 
 export const metadata: Metadata = {
-  title: 'Medium',
+  title: {
+    template: '%s | Medium',
+    default: 'Medium',
+  },
   description: 'A Medium-like Blog Application by Utkarsh Uday',
 };
 
@@ -14,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en' className={source_serif.variable}>
-      <body className='font-serif'>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
