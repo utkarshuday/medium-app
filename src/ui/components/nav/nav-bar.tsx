@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import Avatar from '../avatar';
 import Image from 'next/image';
-import logo from '@/public/logo.svg';
 import WriteIcon from '../icons/write-icon';
 
+import logo from '@/public/logo.svg';
+// TODO Add colors to tailwind config
 export default function NavBar() {
   return (
     <header className='border-b-[1.5px] border-[#f2f2f2] px-4 fixed top-0 inset-x-0 z-10 bg-white'>
