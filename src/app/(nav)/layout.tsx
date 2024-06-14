@@ -1,3 +1,4 @@
+import { BlogLayout } from '@/ui/components/blog-layout';
 import NavBar from '@/ui/components/nav/nav-bar';
 
 export default function AuthLayout({
@@ -8,9 +9,7 @@ export default function AuthLayout({
   return (
     <>
       <NavBar />
-      <main className='flex flex-col max-w-[700px] w-full mx-auto px-5 my-16'>
-        {children}
-      </main>
+      <BlogLayout>{children}</BlogLayout>
     </>
   );
 }
