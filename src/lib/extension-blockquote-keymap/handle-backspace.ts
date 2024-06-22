@@ -30,6 +30,6 @@ export function handleBackspace(editor: Editor) {
   if (!isAtStartOfNode(editor.state)) {
     return false;
   }
-  //it's a blockquote and it is start of node and the node  before is not a blockquote
+
   return editor.commands.liftEmptyBlock();
 }
