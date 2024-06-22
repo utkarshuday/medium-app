@@ -13,7 +13,12 @@ export function handleBackspace(editor: Editor) {
     const newPosition = from - 3;
 
     if (newPosition >= 0) {
-      editor.chain().focus().setTextSelection(newPosition).run();
+      editor
+        .chain()
+        .focus()
+        .setTextSelection(newPosition)
+        .deleteRange({ from: newPosition, to: from })
+        .run();
     }
     return true;
   }
@@ -25,5 +30,6 @@ export function handleBackspace(editor: Editor) {
   if (!isAtStartOfNode(editor.state)) {
     return false;
   }
+  //it's a blockquote and it is start of node and the node  before is not a blockquote
   return editor.commands.liftEmptyBlock();
 }
