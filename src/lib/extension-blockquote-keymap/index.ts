@@ -1,7 +1,7 @@
 import { Extension } from '@tiptap/core';
 import { handleBackspace } from './handle-backspace';
 
-export const BlockquoteKeymap = Extension.create({
+export default Extension.create({
   name: 'blockquoteKeymap',
   addKeyboardShortcuts() {
     return {
