@@ -7,3 +7,44 @@
     text-wrap: balance;
   }
 }
+
+.margin > * {
+  margin-inline: auto;
+  max-width: 700px;
+}
+
+.blockquote p {
+  margin: 0;
+}
+
+.editable-class p strong {
+  font-weight: 600;
+}
+
+.editable-class h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.editable-class h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.editable-class .placeholder-class:nth-child(-n + 2)::before {
+  color: #b3b3b1;
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
+.hide-title-placeholder .editable-class .placeholder-class:first-child::before {
+  display: none;
+}
+
+.hide-paragraph-placeholder
+  .editable-class
+  .placeholder-class:nth-child(2)::before {
+  display: none;
+}
